@@ -22,8 +22,7 @@ const WeekPoint = () => {
 
 
     const todayStart = week_list.map((list, i) => {
-        return i <= today ?
-            week_list[i+today]: week_list[(i-today)-1] 
+        return 6 < (today+i) ?  week_list[i+today-7] : week_list[i+today] 
     })
 
     console.log(todayStart)
